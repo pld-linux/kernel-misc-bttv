@@ -11,7 +11,7 @@ Summary:	BrookTree TV tuner driver
 Summary(pl):	Sterownik dla kart TV na chipsecie BrookTree
 Name:		kernel-misc-bttv
 Version:	0.9.13
-Release:	1
+Release:	1@%{_kernel_ver_str}
 License:	GPL
 Group:		Base/Kernel
 Source0:	http://www.strusel007.de/linux/bttv/%{_orig_name}-%{version}.tar.gz
@@ -111,12 +111,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kernel-misc-bttv
 %defattr(644,root,root,755)
-%doc CARDLIST Changes Insmod-options README* Sound-FAQ Specs Cards
 /lib/modules/%{_kernel_ver}/kernel/drivers/misc/*
 
 %files -n kernel-smp-misc-bttv
 %defattr(644,root,root,755)
-%doc CARDLIST Changes Insmod-options README* Sound-FAQ Specs Cards
 /lib/modules/%{_kernel_ver}smp/kernel/drivers/misc/*
 
 #%files devel
