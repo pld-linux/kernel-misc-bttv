@@ -2,7 +2,7 @@
 # TODO: UP/SMP (if this spec is useful for something now?)
 #
 # Conditional build:
-%bcond_without  dist_kernel	# without kernel from distribution
+%bcond_without	dist_kernel	# without kernel from distribution
 #
 %define		no_install_post_compress_modules	1
 
