@@ -17,12 +17,12 @@ Group:		Base/Kernel
 Source0:	http://www.strusel007.de/linux/bttv/%{_orig_name}-%{version}.tar.gz
 # Source0-md5:	1505d9de8ca4afcd774f00d4bc42c8b9
 URL:		http://www.strusel007.de/linux/bttv/
-ExclusiveArch:	%{ix86}
-#Requires:	i2c
-PreReq:		modutils
 #BuildRequires:	i2c-devel
-BuildRequires:	rpmbuild(macros) >= 1.118
 BuildRequires:	kernel-module-build
+BuildRequires:	rpmbuild(macros) >= 1.118
+#Requires:	i2c
+Requires:	modutils
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,19 +36,19 @@ Modu³y j±dra dodaj±ce obs³ugê kart TV na uk³adach BrookTree BT 848 i
 %package -n kernel-smp-misc-bttv
 Summary:	Kernel SMP modules for BrookTree TV tuner
 Summary(pl):	Modu³y SMP j±dra do obs³ugi tunerów TV BrookTree
-Group:		Base/Kernel
 Release:	%{release}@%{_kernel_ver_str}
-PreReq:		modutils >= 2.4.6-4
+Group:		Base/Kernel
 #Requires:	%{name} = %{version}
+Requires:	modutils >= 2.4.6-4
 Obsoletes:	bttv
 
 %description -n kernel-smp-misc-bttv
-Kernel SMP modules which add support for TV cards based on BrookTree BT
-848 and 878 chips.
+Kernel SMP modules which add support for TV cards based on BrookTree
+BT 848 and 878 chips.
 
 %description -n kernel-smp-misc-bttv -l pl
-Modu³y SMP j±dra dodaj±ce obs³ugê kart TV na uk³adach BrookTree BT 848 i
-878.
+Modu³y SMP j±dra dodaj±ce obs³ugê kart TV na uk³adach BrookTree BT 848
+i 878.
 
 %package devel
 Summary:	Header files for bttv
@@ -121,4 +121,4 @@ rm -rf $RPM_BUILD_ROOT
 
 #%files devel
 #%defattr(644,root,root,755)
-#/usr/src/linux/drivers/char/*
+#%{_kernelsrcdir}/drivers/char/*
