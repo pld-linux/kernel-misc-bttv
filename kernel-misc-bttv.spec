@@ -8,7 +8,7 @@
 
 %define		_orig_name	bttv
 Summary:	BrookTree TV tuner driver
-Summary(pl.UTF-8):   Sterownik dla kart TV na chipsecie BrookTree
+Summary(pl.UTF-8):	Sterownik dla kart TV na chipsecie BrookTree
 Name:		kernel-misc-bttv
 Version:	0.9.13
 Release:	1
@@ -35,7 +35,7 @@ Moduły jądra dodające obsługę kart TV na układach BrookTree BT 848 i
 
 %package -n kernel-smp-misc-bttv
 Summary:	Kernel SMP modules for BrookTree TV tuner
-Summary(pl.UTF-8):   Moduły SMP jądra do obsługi tunerów TV BrookTree
+Summary(pl.UTF-8):	Moduły SMP jądra do obsługi tunerów TV BrookTree
 Release:	%{release}@%{_kernel_ver_str}
 Group:		Base/Kernel
 #Requires:	%{name} = %{version}
@@ -52,7 +52,7 @@ i 878.
 
 %package devel
 Summary:	Header files for bttv
-Summary(pl.UTF-8):   Pliki nagłówkowe bttv
+Summary(pl.UTF-8):	Pliki nagłówkowe bttv
 Group:		Development
 
 %description devel
