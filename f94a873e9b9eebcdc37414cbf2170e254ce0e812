@@ -1,0 +1,3 @@
+- Updated to 0.7.51.
+- Requires s/kernel-headers/kernel-source/ because it needs
+  /USR/SRC/linux/Rules.make. Thanks to Michal Margula <alchemyx@uznam.top.pl>.
