@@ -1,0 +1,2 @@
+- Release 2.
+- /lib/modules/`uname -r`/misc is no longer owned by this package.
