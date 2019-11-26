@@ -72,10 +72,10 @@ install -d include/{linux,config}
 ln -sf %{_kernelsrcdir}/include/linux/autoconf.h include/linux/autoconf.h
 ln -sf %{_kernelsrcdir}/asm-%{_arch} include/asm
 touch include/config/MARKER
-%{__make} -C %{_kernelsrcdir} SUBDIRS=$PWD O=$PWD V=1 modules
+%{__make} -C %{_kernelsrcdir} M=$PWD O=$PWD V=1 modules
 mv *.ko build-done/UP/
 
-%{__make} -C %{_kernelsrcdir} SUBDIRS=$PWD O=$PWD V=1 mrproper
+%{__make} -C %{_kernelsrcdir} M=$PWD O=$PWD V=1 mrproper
 
 ln -sf %{_kernelsrcdir}/config-smp .config
 rm -rf include
